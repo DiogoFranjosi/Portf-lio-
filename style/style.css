@@ -61,11 +61,13 @@ header{
 .nav-responsive{
     display: none;
     position: absolute;
-    top: 100%;
+    top: 60px;
     right: 10px;
-    width: 100%;
+    width: 80%;
     padding: 1rem;
     background-color: var(--bg-color-01);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav a, .nav-responsive a{
@@ -74,6 +76,15 @@ header{
     padding: 0.5rem;
     transition: 0.4s;
 
+}
+
+.nav-responsive a {
+    display: block;
+    padding: 10px;
+}
+
+.menu-hamburguer.active + .nav-responsive {
+    display: block;
 }
 
 .nav a:hover, .nav-responsive a:hover{
@@ -97,10 +108,11 @@ span{
 }
 
 .home-img img, .about-img img{
-    width: 360px;  /* Defina a largura */
-    height: 360px; /* Defina a altura */
+    width: 80%; 
+    max-width: 360px;
+    height: auto;
     border-radius: 50%;
-    object-fit: cover;
+    
 
 }
 
@@ -378,9 +390,22 @@ footer{
         gap: 1.2rem;
     }
 
-    .home-img, .about-img{
-        width: 80%;
-        max-width: 80%;
+    .about-img{
+       width: 80%;
+    }
+
+    .home-img {
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente (se necessário) */
+        width: 100%; /* Garante que ocupe toda a largura disponível */
+        margin: 0 auto; /* Centraliza caso o elemento seja `block` */
+        text-align: center; /* Garante centralização se for um elemento inline */
+    }
+
+    .home-img img {
+        max-width: 100%; /* Evita que a imagem ultrapasse os limites da tela */
+        height: auto; /* Mantém a proporção */
     }
 
     .home-content, .about-content{
@@ -413,6 +438,21 @@ footer{
     .home-img, .about-img{
         width: 65%;
         max-width: 65%;
+    }
+
+    .home-img {
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente (se necessário) */
+        width: 100%; /* Garante que ocupe toda a largura disponível */
+        margin: 0 auto; /* Centraliza caso o elemento seja `block` */
+        text-align: center; /* Garante centralização se for um elemento inline */
+    }
+
+
+    .home-img img {
+        max-width: 100%; /* Evita que a imagem ultrapasse os limites da tela */
+        height: auto; /* Mantém a proporção */
     }
 
     .services-box{
@@ -465,8 +505,12 @@ footer{
     }
 
     .services-container{
-        flex-direction: column;
+        flex-direction: column;        align-items: center;
         gap: 3.2rem;
+    }
+
+    .services-box {
+        width: 60%; /* Reduzindo a largura para melhor encaixe */
     }
     
 }
