@@ -201,21 +201,37 @@ span{
 
 .portfolio-container{
     display: grid;
-    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+    justify-items: center;
 }
+
 .portfolio-box{
-    position: relative;
-    
-    box-shadow: 0 0 0.6rem var(--bg-color-01);
-    overflow: hidden;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px; /* Estica o card ao máximo permitido */
+    background-color: var(--bg-color-02);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
 }
+
+.portfolio-box:last-child {
+    grid-column: 1 / 3; /* faz o último ocupar as duas colunas */
+    justify-self: center; /* centraliza ele no meio */
+    width: 50%;
+  }
 
 .portfolio-box img{
     width: 100%;
     transition: 0.5s ease;
     filter: brightness(0.6); /* Deixa a imagem 60% mais clara, ou seja, mais escura */
     transition: 0.3s ease;
+    display: block;
+    border-radius: 0.5rem;
 }
 
 .portfolio-box img:hover{
@@ -235,21 +251,25 @@ span{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0.4rem;
+    padding: 1rem;
     transform: translateY(30rem);
     transition: 0.5s ease;
+    opacity: 0;
 }
 
 .portfolio-box:hover .portfolio-layer{
     transform: translateY(0);
+    opacity: 1;
 }
 
-.portfolio-layer h4{
-    font-size: 1.8rem;
+.portfolio-box .portfolio-layer h4{
+    font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.portfolio-layer p{
+.portfolio-box .portfolio-layer p{
     margin: 0.2rem 0 0.5rem;
+    font-size: 1rem;
 }
 
 .portfolio-layer a{
