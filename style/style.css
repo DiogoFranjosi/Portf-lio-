@@ -112,8 +112,18 @@ span{
     max-width: 360px;
     height: auto;
     border-radius: 50%;
-    
+}
 
+.about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
 .home-content, .about-content{
@@ -204,10 +214,13 @@ span{
 .portfolio-box img{
     width: 100%;
     transition: 0.5s ease;
+    filter: brightness(0.6); /* Deixa a imagem 60% mais clara, ou seja, mais escura */
+    transition: 0.3s ease;
 }
 
 .portfolio-box img:hover{
     transform: scale(1.1);
+    filter: brightness(1); /* Retorna ao normal ao passar o mouse */
 }
 
 .portfolio-box .portfolio-layer{
@@ -253,11 +266,36 @@ span{
     color: var(--bg-color-02);
 }
 
+#status-message {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 form{
     max-width: 45rem;
     margin: 0.6rem auto;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.4rem 0;
+}
+
+
+form .input-box input, form textarea{
+    width: 48%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--bg-color-02);
+    border-radius: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 form .input-box{
@@ -267,6 +305,7 @@ form .input-box{
     margin: 0.4rem 0;
 }
 
+
 form .input-box input, form textarea{
     width: 100%;
     padding: 1rem;
@@ -275,7 +314,47 @@ form .input-box input, form textarea{
     background-color: var(--bg-color-02);
     border-radius: 0.5rem;
     margin: 0.4rem 0;
+    form{
+        max-width: 45rem;
+        margin: 0.6rem auto;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    form .input-box{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin: 0.4rem 0;
+    }
+
+    form .input-box input[type="text"],
+    form .input-box input[type="email"] {
+    width: 48%;
 }
+    
+    
+    form .input-box input, form textarea{
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        color: var(--text-color);
+        background-color: var(--bg-color-02);
+        border-radius: 0.5rem;
+        margin: 0.4rem 0;
+        box-sizing: border-box;
+    }
+    
+    form textarea{
+        resize: none;
+    }
+}
+
+form textarea{
+    resize: none;
+}
+
 
 form textarea{
     resize: none;
@@ -392,7 +471,7 @@ footer{
     }
 
     .about-img{
-       width: 80%;
+       width: 70%;
     }
 
     .home-img {
@@ -483,6 +562,10 @@ footer{
         display: none;
     }
 
+    .home {
+        margin-left: 13%;
+      }
+
     .home, .about{
         flex-direction: row;
         justify-content: space-evenly;
@@ -493,7 +576,8 @@ footer{
     }
 
     .home-img, .about-img{
-        max-width: 35%;
+        width: 25%;
+        max-width: 25%;
     }
 
     .services-box{
@@ -505,12 +589,25 @@ footer{
         grid-template-columns: auto auto;
     }
 
+    form .input-box{
+        flex-direction: column;
+    }
+
     form .input-box input{
-        width: 49%;
+        width: 100%;
     }
 
     .home-img, .about-img{
         max-width: 35%;
+    }
+    
+    .about-img {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about-img img {
+        margin: 0 auto;
     }
 
     .services-container{
@@ -521,9 +618,20 @@ footer{
 
     .services-box {
         width: 60%; /* Reduzindo a largura para melhor encaixe */
-    }
-    
+    }   
 }
+
+@media (max-width: 767px) {
+    section.contact {
+      margin-bottom: 4rem;
+    }
+  
+    
+  
+    .about-img {
+      margin-top: 5rem;
+    }
+  }
 
 @media (min-width: 992px){
 
@@ -536,9 +644,7 @@ footer{
 
 @media (min-width: 1200px){
 
-    .home-img, .about-img{
-        max-width: 25%;
-    }
+    
 
     .home-content h1{
         font-size: 2.7rem;
@@ -561,6 +667,10 @@ footer{
     animation: fadeIn 1s ease-in forwards;
 }
 
+.fade-in-2 {
+    animation: fadeIn 3s ease-in forwards;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -570,4 +680,42 @@ footer{
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+.contact {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 10rem;
+  }
+
+  .contact form {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #status-message {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .about {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  form {
+  }
+
+  .contact h2 {
+    margin-bottom: 1rem !important;
+  }
+
+  .home-img img,
+  .about-img img {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
