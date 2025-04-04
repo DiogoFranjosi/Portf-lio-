@@ -431,6 +431,14 @@ footer{
         width: 100%;
     }
 
+    .portfolio-layer h4 {
+        font-size: clamp(1rem, 4vw, 1.8rem);
+    }
+    
+    .portfolio-layer p {
+        font-size: clamp(0.85rem, 3vw, 1rem);
+    }
+
 }
 
 @media (min-width: 576px){
