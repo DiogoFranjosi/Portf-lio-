@@ -264,6 +264,7 @@ form .input-box{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0.4rem 0;
 }
 
 form .input-box input, form textarea{
@@ -513,7 +514,8 @@ footer{
     }
 
     .services-container{
-        flex-direction: column;        align-items: center;
+        flex-direction: column;
+        align-items: center;
         gap: 3.2rem;
     }
 
@@ -552,3 +554,20 @@ footer{
 }
 
 /* FIM MEDIA QUERIES */
+
+/* LEVE CARREGAMENTO DO CONTEÚDO */
+
+.fade-in {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
