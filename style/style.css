@@ -220,7 +220,7 @@ span{
 
 .portfolio-box img:hover{
     transform: scale(1.1);
-    filter: brightness(1); /* Retorna ao normal ao passar o mouse */
+    /* filter: brightness(1); /* Retorna ao normal ao passar o mouse */
 }
 
 .portfolio-box .portfolio-layer{
