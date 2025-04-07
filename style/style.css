@@ -665,3 +665,12 @@ select:-webkit-autofill {
     -webkit-text-fill-color: var(--text-color) !important;
     transition: background-color 5000s ease-in-out 0s;
 }
+
+#status-message {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  #status-message.fade-out {
+    opacity: 0;
+  }
