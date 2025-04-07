@@ -34,7 +34,7 @@ Este projeto é o meu portfólio pessoal como Desenvolvedor Full Stack, criado c
 
    Navegue até a pasta do projeto: cd portfolio
 
-##📬 Contato
+## 📬 Contato
 
 Se quiser saber mais ou tiver interesse em entrar em contato, aqui estão meus links:
 
@@ -42,6 +42,6 @@ Se quiser saber mais ou tiver interesse em entrar em contato, aqui estão meus l
 
 📧 Email: diogofranjosi@icloud.com
 
-##🧾 Sobre Mim
+## 🧾 Sobre Mim
 
 Sou estudante de Análise e Desenvolvimento de Sistemas na UNIP, com formação técnica pelo ITB. Tenho experiência acadêmica e prática em desenvolvimento Web (Front e Back-End), Mobile e Análise de Dados. Atualmente trabalho como Desenvolvedor Júnior na ItPower e sou Aspirante a Oficial R2 da arma de Comunicações pelo Exército Brasileiro.
