@@ -155,20 +155,19 @@
       <section class="contact" id="contact">
         <h2>Entre em contato <span>Comigo!</span></h2>
 
-        <form action="send_email.php" method="POST" onsubmit="return validateForm(event)">
+        <form method="POST" onsubmit="validateForm(event)">
             <div class="input-box">
                 <input type="text" name="nome" placeholder="Nome Completo" required>
                 <input type="email" name="email" placeholder="E-mail" required>
             </div>
-        
-            <div class="input-box">
-                <input type="text" name="assunto" placeholder="Assunto" required>
-            </div>
-        
+            
+            <input type="text" name="assunto" class="full-width" placeholder="Assunto" required>
+
             <textarea name="mensagem" cols="100" rows="8" placeholder="Mensagem" required></textarea>
+            
             <button type="submit" class="btn">Enviar Mensagem</button>
         
-            <p id="status-message"></p> 
+            <p id="status-message" style="margin-top: 1rem;"></p>
         </form>
       </section>
      <!-- FIM CONTACT SECTION -->
@@ -192,7 +191,8 @@
         <p>Copyright &copy; 2025. All Rights Reserved.</p>
      </footer>
 
-</body>
 
-<script src="script/script.js"></script>
+     <script src="script/script.js"></script>
+
+</body>
 </html>
