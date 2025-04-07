@@ -185,6 +185,10 @@ span{
     text-overflow: ellipsis;
 }
 
+section.portfolio {
+    padding-top: 2rem;
+  }
+
 .portfolio{
     background-color: var(--bg-color-02);
 }
@@ -195,7 +199,6 @@ span{
 }
 .portfolio-box{
     position: relative;
-    
     box-shadow: 0 0 0.6rem var(--bg-color-01);
     overflow: hidden;
     display: flex;
@@ -417,6 +420,7 @@ footer{
         width: 100%; /* Garante que ocupe toda a largura disponível */
         margin: 0 auto; /* Centraliza caso o elemento seja `block` */
         text-align: center; /* Garante centralização se for um elemento inline */
+        margin-top: 5rem;
     }
 
     .home-img img {
@@ -449,32 +453,32 @@ footer{
 
 }
 
-@media (min-width: 576px){
-
-    .home-img, .about-img{
-        width: 65%;
-        max-width: 65%;
+@media (max-width: 767px) {
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-
-    .home-img {
-        display: flex;
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center; /* Centraliza verticalmente (se necessário) */
-        width: 100%; /* Garante que ocupe toda a largura disponível */
-        margin: 0 auto; /* Centraliza caso o elemento seja `block` */
-        text-align: center; /* Garante centralização se for um elemento inline */
+  
+    .about-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 1rem;
     }
-
-
-    .home-img img {
-        max-width: 100%; /* Evita que a imagem ultrapasse os limites da tela */
-        height: auto; /* Mantém a proporção */
+  
+    .about-img img {
+      display: block;
+      max-width: 80%;
+      height: auto;
+      margin: 0 auto;
     }
-
-    .services-box{
-        width: 70%;
+  
+    .about-content {
+      text-align: center;
     }
-}
+  }
 
 @media (min-width: 768px){
 
@@ -528,6 +532,7 @@ footer{
     .services-box {
         width: 60%; /* Reduzindo a largura para melhor encaixe */
     }
+
     
 }
 
@@ -536,7 +541,36 @@ footer{
       .services-container{
         flex-direction: row;
         gap: 1.2rem;
-    }  
+    }
+    
+    .portfolio-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "box1 box2"
+        "box3 box3";
+    justify-content: center;
+}
+
+.portfolio-box:nth-child(1) {
+    grid-area: box1;
+}
+
+.portfolio-box:nth-child(2) {
+    grid-area: box2;
+}
+
+.portfolio-box:nth-child(3) {
+    grid-area: box3;
+    justify-self: center;
+    width: 50%;
+}
+
+section.contact {
+    min-height: auto;
+    padding-bottom: 0;
+  }
     
 }
 
