@@ -40,13 +40,16 @@ Este projeto é o meu portfólio pessoal como Desenvolvedor Full Stack, criado c
 📁 portfólio/ ├── index.html ├── style.css ├── script.js ├── curriculo.pdf └── README.md
 
 ## 🚀 Como Executar Localmente
+```
+✅ 1. Copie a URL do repositório
+No GitHub, clique no botão verde "Code" e copie a URL https://github.com/DiogoFranjosi/portfolio.git
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/DiogoFranjosi/portfolio.git
+✅ 2. Abra o terminal e execute:
+git clone https://github.com/DiogoFranjosi/portfolio.git
 
-
-   Navegue até a pasta do projeto:    cd portfolio
+✅ 3. Acesse a pasta clonada:
+cd seu-repositorio
+```
 
 ## 📬 Contato
 
