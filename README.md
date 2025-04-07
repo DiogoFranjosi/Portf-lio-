@@ -29,11 +29,11 @@ Este projeto é o meu portfólio pessoal como Desenvolvedor Full Stack, criado c
 
 ## 🎯 Funcionalidades
 
- Layout **moderno, escuro e responsivo** para desktop e mobile.
- **Menu lateral interativo** com ícones e seções.
- **Formulário de contato** com feedback visual e validação.
- **Animações suaves** e efeitos em botões e imagens.
- Ícones sociais com **hover animado** e links externos.
+- Layout **moderno, escuro e responsivo** para desktop e mobile.
+- **Menu lateral interativo** com ícones e seções.
+- **Formulário de contato** com feedback visual e validação.
+- **Animações suaves** e efeitos em botões e imagens.
+- Ícones sociais com **hover animado** e links externos.
 
 ## 📁 Estrutura de Arquivos
 
