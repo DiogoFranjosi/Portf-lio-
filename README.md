@@ -11,6 +11,16 @@ Este projeto é o meu portfólio pessoal como Desenvolvedor Full Stack, criado c
 - 🔗 Links diretos para LinkedIn e GitHub.
 - 🎨 Animações de transição e hover para interações suaves.
 
+  ## 📌 Seções do Site
+
+- **Home**: Saudação de boas-vindas, com meu nome, imagem e ícones interativos do LinkedIn e GitHub.
+- **Sobre (About)**: Uma introdução pessoal e profissional, com meu currículo em PDF disponível para download.
+- **Habilidades (Skills)**: Lista das principais tecnologias que domino, como HTML, CSS, JavaScript e Git.
+- **Serviços (Services)**: Destaque dos serviços que ofereço: Desenvolvimento Web, Back-End e Mobile.
+- **Portfólio (Portfolio)**: Galeria com meus projetos mais recentes.
+- **Contato (Contact)**: Formulário funcional com animações, mensagens de sucesso/erro e ícone de carregamento.
+
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5** – estrutura semântica da página.
@@ -18,9 +28,17 @@ Este projeto é o meu portfólio pessoal como Desenvolvedor Full Stack, criado c
 - **JavaScript** – manipulação de eventos, animações, validações e mensagens do formulário.
 - **Figma** *(prototipagem)* – utilizado na criação do design visual (não incluído no repositório).
 
-## 📁 Estrutura do Projeto
+  ## 🎯 Funcionalidades
 
-📦 Portfolio ├── 📄 index.html ├── 🎨 style.css ├── ⚙️ script.js └── 📄 curriculo.pdf
+ Layout **moderno, escuro e responsivo** para desktop e mobile.
+ **Menu lateral interativo** com ícones e seções.
+ **Formulário de contato** com feedback visual e validação.
+ **Animações suaves** e efeitos em botões e imagens.
+ Ícones sociais com **hover animado** e links externos.
+
+## 📁 Estrutura de Arquivos
+
+📁 portfólio/ ├── index.html ├── style.css ├── script.js ├── curriculo.pdf └── README.md
 
 ## 📸 Captura de Tela
 
