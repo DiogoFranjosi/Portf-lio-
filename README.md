@@ -26,8 +26,7 @@ Este projeto é o meu portfólio pessoal como Desenvolvedor Full Stack, criado c
 - **HTML5** – estrutura semântica da página.
 - **CSS3** – estilização com foco em responsividade e tema escuro.
 - **JavaScript** – manipulação de eventos, animações, validações e mensagens do formulário.
-- **Figma** *(prototipagem)* – utilizado na criação do design visual (não incluído no repositório).
-
+- 
   ## 🎯 Funcionalidades
 
  Layout **moderno, escuro e responsivo** para desktop e mobile.
