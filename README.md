@@ -37,7 +37,15 @@ Este projeto é o meu portfólio pessoal como Desenvolvedor Full Stack, criado c
 
 ## 📁 Estrutura de Arquivos
 
-📁 portfólio/ ├── index.html ├── style.css ├── script.js ├── curriculo.pdf └── README.md
+📁 ```
+portfólio/
+│
+├── index.html
+├── style.css
+├── script.js
+├── curriculo.pdf
+└── README.md
+```
 
 ## 🚀 Como Executar Localmente
 
