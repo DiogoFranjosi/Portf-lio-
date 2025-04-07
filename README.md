@@ -32,10 +32,7 @@ Este projeto é o meu portfólio pessoal como Desenvolvedor Full Stack, criado c
    ```bash
    git clone https://github.com/DiogoFranjosi/portfolio.git
 
-   Navegue até a pasta do projeto:
-
-2. Navegue até a pasta do projeto:
-cd portfolio
+   Navegue até a pasta do projeto: cd portfolio
 
 📬 Contato
 Se quiser saber mais ou tiver interesse em entrar em contato, aqui estão meus links:
