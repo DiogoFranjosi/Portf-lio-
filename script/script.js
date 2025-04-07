@@ -47,7 +47,7 @@ function validateForm(event) {
     // Aguarda e envia
     setTimeout(() => {
         const numeroWhatsApp = '5511977218265';
-        const texto = `Olá, me chamo ${nome}%0AEmail: ${email}%0AAssunto: ${assunto}%0AMensagem: ${mensagem}`;
+        const texto = `Olá, me chamo ${nome}!%0AEmail: ${email}%0AAssunto: ${assunto}%0AMensagem: ${mensagem}`;
         const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${texto}`;
 
         showStatus('Mensagem enviada com sucesso! Redirecionando para o WhatsApp...', 'success');
