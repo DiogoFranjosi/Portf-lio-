@@ -11,7 +11,7 @@ Este projeto é o meu portfólio pessoal como Desenvolvedor Full Stack, criado c
 - 🔗 Links diretos para LinkedIn, GitHub e Instagram.
 - 🎨 Animações de transição e hover para interações suaves.
 
-  ## 📌 Seções do Site
+## 📌 Seções do Site
 
 - **Home**: Saudação de boas-vindas, com meu nome, imagem e ícones interativos do LinkedIn e GitHub.
 - **Sobre (About)**: Uma introdução pessoal e profissional, com meu currículo em PDF disponível para download.
@@ -27,7 +27,7 @@ Este projeto é o meu portfólio pessoal como Desenvolvedor Full Stack, criado c
 - **CSS3** – estilização com foco em responsividade e tema escuro.
 - **JavaScript** – manipulação de eventos, animações, validações e mensagens do formulário.
 
-  ## 🎯 Funcionalidades
+## 🎯 Funcionalidades
 
  Layout **moderno, escuro e responsivo** para desktop e mobile.
  **Menu lateral interativo** com ícones e seções.
