@@ -18,22 +18,38 @@ function toggleMenu(){
 }
 
 /* VALIDAÇÃO DO FORMULÁRIO PELO WHATS */
-
 function validateForm(event) {
-    event.preventDefault(); // Impede envio padrão do formulário
-
-    const nome = document.querySelector('input[name="nome"]').value;
-    const email = document.querySelector('input[name="email"]').value;
-    const telefone = document.querySelector('input[name="telefone"]').value;
-    const assunto = document.querySelector('input[name="assunto"]').value;
-    const mensagem = document.querySelector('textarea[name="mensagem"]').value;
-
-    const numeroWhatsApp = '5511977218265';
-
-    const texto = `Olá, me chamo ${nome}%0AEmail: ${email}%0ATelefone: ${telefone}%0AAssunto: ${assunto}%0AMensagem: ${mensagem}`;
-
-    const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${texto}`;
-
-    window.open(url, '_blank'); // Abre o WhatsApp em nova aba
-    return false;
-}
+    event.preventDefault();
+  
+    const nome = document.querySelector('input[name="nome"]').value.trim();
+    const email = document.querySelector('input[name="email"]').value.trim();
+    const assunto = document.querySelector('input[name="assunto"]').value.trim();
+    const mensagem = document.querySelector('textarea[name="mensagem"]').value.trim();
+    const statusMessage = document.getElementById('status-message');
+  
+    if (!statusMessage) {
+      alert("Elemento de status não encontrado.");
+      return;
+    }
+  
+    const showStatus = (msg, type) => {
+        statusMessage.textContent = msg;
+      
+        statusMessage.classList.remove('success', 'error', 'loading');
+        statusMessage.classList.add(type); // adiciona a classe correspondente
+      };
+  
+    // Simula envio e redireciona
+    setTimeout(() => {
+      const numeroWhatsApp = '5511977218265';
+      const texto = `Olá, me chamo ${nome}%0AEmail: ${email}%0AAssunto: ${assunto}%0AMensagem: ${mensagem}`;
+      const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${texto}`;
+  
+      showStatus('Mensagem enviada com sucesso! Redirecionando para o WhatsApp...', 'success');
+  
+      setTimeout(() => {
+        window.open(url, '_blank');
+      }, 1000);
+    }, 1200);
+  }
+  
