@@ -608,8 +608,28 @@ footer{
         width: 60%; /* Reduzindo a largura para melhor encaixe */
     }
 
-    .tools-languages .icon {
-        width: calc(50% - 1rem); /* 2 ícones por linha em telas pequenas */
+    .tools-languages-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 ícones por linha */
+        gap: 1rem; /* Espaço entre os ícones */
+        justify-items: center; /* Alinha os ícones no centro */
+        margin-top: 3rem;
+    }
+
+    /* Ajuste a largura de cada ícone para se encaixar na tela */
+    .tools-languages-container .tools-box,
+    .tools-languages-container .languages-box {
+        width: 100%;
+        height: auto; /* Ajusta a altura conforme necessário */
+    }
+
+    /* Certifique-se de que os ícones estejam ajustados para 2 por linha */
+    .tools-languages-container i {
+        font-size: 3rem; /* Reduz o tamanho do ícone se necessário */
+    }
+
+    .tools-languages-container h3 {
+        font-size: 0.9rem; /* Ajuste o tamanho do texto se necessário */
     }
 
     
