@@ -99,11 +99,6 @@ section{
     padding-bottom: 2rem;
 }
 
-section#skills {
-    padding-top: 10rem; /* Ajuste conforme necessário */
-    margin-top: 0; /* Garantir que não haja margem extra */
-}
-
 span{
     color: var(--main-color);
 }
@@ -278,47 +273,6 @@ section.portfolio {
     color: var(--bg-color-02);
 }
 
-.tools-languages-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5rem;
-    margin-top: 5rem;
-}
-
-.tools-languages-container .tools-box,
-.tools-languages-container .languages-box {
-    width: 9rem;
-    height: 9rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-    background-color: var(--bg-color-02);
-    border: solid 0.15rem var(--bg-color-01);
-    text-align: center;
-    transition: 0.3s ease;
-}
-
-.tools-languages-container i {
-    font-size: 4.5rem;
-    color: var(--main-color);
-    margin-bottom: 1rem;
-}
-
-.tools-languages-container h3 {
-    font-size: 1rem;
-    color: var(--text-color);
-}
-
-.tools-languages-container .tools-box:hover,
-.tools-languages-container .languages-box:hover {
-    border-color: var(--main-color);
-    transform: scale(1.05);
-}
-
-
 form{
     max-width: 45rem;
     margin: 0.6rem auto;
@@ -437,13 +391,6 @@ footer{
     transform: translate(0, -0.65rem) rotate(45deg);
 }
 
-.subheading {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: 2.2rem;
-}
-
 /* FIM MENU HAMBURGUER */
 
 /* MEDIA QUERIES */
@@ -515,16 +462,16 @@ footer{
         width: 100%;
     }
 
-    .tools-languages {
-        grid-template-columns: repeat(1, 1fr); /* Em telas pequenas, um ícone por linha */
-    }
-
 }
 
 @media (max-width: 480px) {
     .portfolio-layer p {
         font-size: 0.85rem;
         line-height: 1.2;
+    }
+
+    .tools-languages .icon {
+        width: calc(50% - 1rem); /* 2 ícones por linha em telas pequenas */
     }
 }
 
@@ -600,7 +547,8 @@ footer{
     }
 
     .services-container{
-        flex-direction: column;        align-items: center;
+        flex-direction: column;        
+        align-items: center;
         gap: 3.2rem;
     }
 
@@ -608,31 +556,6 @@ footer{
         width: 60%; /* Reduzindo a largura para melhor encaixe */
     }
 
-    .tools-languages-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 ícones por linha */
-        gap: 1rem; /* Espaço entre os ícones */
-        justify-items: center; /* Alinha os ícones no centro */
-        margin-top: 3rem;
-    }
-
-    /* Ajuste a largura de cada ícone para se encaixar na tela */
-    .tools-languages-container .tools-box,
-    .tools-languages-container .languages-box {
-        width: 100%;
-        height: auto; /* Ajusta a altura conforme necessário */
-    }
-
-    /* Certifique-se de que os ícones estejam ajustados para 2 por linha */
-    .tools-languages-container i {
-        font-size: 3rem; /* Reduz o tamanho do ícone se necessário */
-    }
-
-    .tools-languages-container h3 {
-        font-size: 0.9rem; /* Ajuste o tamanho do texto se necessário */
-    }
-
-    
 }
 
 @media (min-width: 992px){
