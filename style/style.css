@@ -93,7 +93,15 @@ header{
 
 section{
     min-height: 100vh;
-    padding: 6rem 5rem 2rem;
+    padding-top: 7rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+}
+
+section#skills {
+    padding-top: 10rem; /* Ajuste conforme necessário */
+    margin-top: 0; /* Garantir que não haja margem extra */
 }
 
 span{
@@ -234,6 +242,12 @@ section.portfolio {
     transition: 0.5s ease;
 }
 
+.portfolio-layer {
+    padding: 0.5rem;
+    word-break: break-word;
+    text-align: center;
+}
+
 .portfolio-box:hover .portfolio-layer{
     transform: translateY(0);
 }
@@ -246,6 +260,8 @@ section.portfolio {
 .portfolio-layer p{
     margin: 0.2rem 0 0.5rem;
     font-size: 1rem;
+    max-height: 100px;
+    overflow-y: auto;
 }
 
 .portfolio-layer a{
@@ -261,6 +277,47 @@ section.portfolio {
     font-size: 1.2rem;
     color: var(--bg-color-02);
 }
+
+.tools-languages-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+.tools-languages-container .tools-box,
+.tools-languages-container .languages-box {
+    width: 9rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: var(--bg-color-02);
+    border: solid 0.15rem var(--bg-color-01);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.tools-languages-container i {
+    font-size: 4.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.tools-languages-container h3 {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.tools-languages-container .tools-box:hover,
+.tools-languages-container .languages-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.05);
+}
+
 
 form{
     max-width: 45rem;
@@ -380,6 +437,13 @@ footer{
     transform: translate(0, -0.65rem) rotate(45deg);
 }
 
+.subheading {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
 /* FIM MENU HAMBURGUER */
 
 /* MEDIA QUERIES */
@@ -451,6 +515,17 @@ footer{
         width: 100%;
     }
 
+    .tools-languages {
+        grid-template-columns: repeat(1, 1fr); /* Em telas pequenas, um ícone por linha */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .portfolio-layer p {
+        font-size: 0.85rem;
+        line-height: 1.2;
+    }
 }
 
 @media (max-width: 767px) {
@@ -533,6 +608,10 @@ footer{
         width: 60%; /* Reduzindo a largura para melhor encaixe */
     }
 
+    .tools-languages {
+        grid-template-columns: repeat(1, 1fr); /* Em telas pequenas, um ícone por linha */
+    }
+
     
 }
 
@@ -591,6 +670,8 @@ section.contact {
     .portfolio-container{
         grid-template-columns: auto auto;
     }
+
+    
 }
 
 /* FIM MEDIA QUERIES */
