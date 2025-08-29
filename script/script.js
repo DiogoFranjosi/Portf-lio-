@@ -10,59 +10,53 @@ function toggleMenu() {
     nav.style.display = menuHamburguer.classList.contains('change') ? 'block' : 'none';
 }
 
-/* VALIDAÇÃO E ENVIO PELO WHATSAPP */
-function validateForm(event) {
-    event.preventDefault();
+/* FORMULÁRIO DE CONTATO ENVIO PELO WHATSAPP + SWEETALERT2 */
+const form = document.getElementById("contact-form");
 
-    const nome = document.querySelector('input[name="nome"]').value.trim();
-    const email = document.querySelector('input[name="email"]').value.trim();
-    const assunto = document.querySelector('input[name="assunto"]').value.trim();
-    const mensagem = document.querySelector('textarea[name="mensagem"]').value.trim();
-    const statusMessage = document.getElementById('status-message');
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    const showStatus = (msg, type) => {
-        statusMessage.textContent = msg;
-        statusMessage.style.opacity = 1;
-        statusMessage.style.color =
-            type === 'success' ? 'limegreen' :
-            type === 'loading' ? '#ffaa00' :
-            'crimson';
-    };
+    // Captura os dados do formulário
+    const nome = form.querySelector("input[name='nome']").value.trim();
+    const email = form.querySelector("input[name='email']").value.trim();
+    const assunto = form.querySelector("input[name='assunto']").value.trim();
+    const mensagem = form.querySelector("textarea[name='mensagem']").value.trim();
 
-    // Mostra carregando imediatamente
-    showStatus('Enviando mensagem...', 'loading');
-
-    // Validações
     if (!nome || !email || !assunto || !mensagem) {
-        showStatus('Por favor, preencha todos os campos.', 'error');
+        Swal.fire({
+            icon: "warning",
+            title: "Campos obrigatórios",
+            text: "Por favor, preencha todos os campos antes de enviar."
+        });
         return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-        showStatus('Por favor, insira um e-mail válido.', 'error');
+        Swal.fire({
+            icon: "error",
+            title: "E-mail inválido",
+            text: "Por favor, insira um e-mail válido."
+        });
         return;
     }
 
-    // Aguarda e envia
-    setTimeout(() => {
-        const numeroWhatsApp = '5511977218265';
-        const texto = `Olá, me chamo ${nome}!%0AEmail: ${email}%0AAssunto: ${assunto}%0AMensagem: ${mensagem}`;
-        const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${texto}`;
+    const texto = `Olá, meu nome é ${nome}!\n` +
+                  `Email: ${email}\n` +
+                  `Assunto: ${assunto}\n` +
+                  `Mensagem: ${mensagem}`;
 
-        showStatus('Mensagem enviada com sucesso! Redirecionando para o WhatsApp...', 'success');
+    const numeroWhatsApp = "5511977218265";
 
-        // Apaga a mensagem suavemente após abrir o WhatsApp
-        setTimeout(() => {
-            window.open(url, '_blank');
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
 
-            // fade-out
-            statusMessage.classList.add('fade-out');
-
-            setTimeout(() => {
-                statusMessage.textContent = '';
-                statusMessage.classList.remove('fade-out');
-            }, 500);
-        }, 1500);
-    }, 1000);
-}
+    Swal.fire({
+        icon: "info",
+        title: "Redirecionando para o WhatsApp...",
+        text: "Clique em 'OK' para enviar a mensagem.",
+        confirmButtonText: "OK"
+    }).then(() => {
+        window.open(url, "_blank");
+        form.reset();
+    });
+});
